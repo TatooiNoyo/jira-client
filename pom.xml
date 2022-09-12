@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.rcarz</groupId>
+    <groupId>noyo.tatooi</groupId>
     <artifactId>jira-client</artifactId>
     <version>0.6-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -136,4 +136,3 @@
         </plugins>
     </build>
 </project>
-direct
