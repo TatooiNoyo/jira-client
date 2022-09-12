@@ -32,6 +32,24 @@ public class IssueTest {
     }
 
     @Test
+    public void testListIssues(){
+        BasicCredentials creds = new BasicCredentials("tatooi.noyo@gmail.com", "oUc52sVtO6TKRsuttgWz168B");
+        JiraClient jiraClient = null;
+        try {
+            jiraClient= new JiraClient("https://tatooinoyo.atlassian.net", creds);
+        } catch (JiraException e) {
+            e.printStackTrace();
+        }
+        Issue.SearchResult searchResult = null;
+        try {
+            searchResult = jiraClient.searchIssues("created >= -30d order by created DESC");
+        } catch (JiraException e) {
+            e.printStackTrace();
+        }
+        List<Issue> issues = searchResult.issues;
+        System.out.println(issues);
+    }
+    @Test
     public void testGetIssueStatus() {
 
         String statusName = "To Do";
