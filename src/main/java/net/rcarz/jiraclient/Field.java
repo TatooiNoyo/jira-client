@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.sf.json.JSON;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JSONNull;
@@ -621,16 +622,12 @@ public final class Field {
                     itemMap.put(ValueType.NAME.toString(), realValue.toString());
 
                 realResult = itemMap;
-            } else if ( type.equals("option") ||
-                    (
-                    type.equals("string") && custom != null
-                    && (custom.equals("com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes") ||
-                    custom.equals("com.atlassian.jira.plugin.system.customfieldtypes:multiselect")))) {
-                
+            } else if ( type.equals("option")) {
                 realResult = new JSONObject();
                 ((JSONObject)realResult).put(ValueType.VALUE.toString(), realValue.toString());
-            } else if (type.equals("string"))
+            } else if (type.equals("string")) {
                 realResult = realValue.toString();
+            }
 
             if (oper != null) {
                 JSONObject operMap = new JSONObject();
@@ -712,7 +709,7 @@ public final class Field {
                 json.put(ValueType.KEY.toString(), value.toString());
 
             return json.toString();
-        } else if (m.type.equals("string") || (m.type.equals("securitylevel") || m.type.equals("option"))) {
+        } else if (m.type.equals("string") || (m.type.equals("securitylevel"))) {
             if (value == null)
                 return "";
             else if (value instanceof List)
@@ -725,6 +722,10 @@ public final class Field {
             }
 
             return value.toString();
+        } else if(m.type.equals("option")){
+            JSONObject json = new JSONObject();
+            json.put(ValueType.VALUE.toString(),value);
+            return json.toString();
         } else if (m.type.equals("timetracking")) {
             if (value == null)
                 return JSONNull.getInstance();
