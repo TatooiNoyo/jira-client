@@ -38,6 +38,7 @@ import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.ByteArrayBody;
 import org.apache.http.entity.mime.content.FileBody;
@@ -52,6 +53,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 /**
@@ -198,7 +200,7 @@ public class RestClient {
         if (file != null) {
             File fileUpload = file;
             req.setHeader("X-Atlassian-Token", "nocheck");
-            MultipartEntity ent = new MultipartEntity();
+            MultipartEntity ent = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE,null, StandardCharsets.UTF_8);
             ent.addPart("file", new FileBody(fileUpload));
             req.setEntity(ent);
         }
@@ -336,7 +338,7 @@ public class RestClient {
      * Content-Type header. You should not use this function when proper JSON
      * is expected.
      *
-     * @see https://jira.atlassian.com/browse/JRA-29304
+     * @see  https://jira.atlassian.com/browse/JRA-29304
      *
      * @param uri Full URI of the remote endpoint
      * @param payload Raw string to send to the remote service
