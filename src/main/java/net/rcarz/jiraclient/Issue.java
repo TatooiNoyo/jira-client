@@ -965,6 +965,20 @@ public class Issue extends Resource {
     }
 
     /**
+     * Adds an attachment to this issue.
+     * @param in java.io.InputStream
+     * @param filename file's name
+     * @throws JiraException when the attachment creation fails
+     */
+    public void addAttachment(InputStream in,String filename) throws JiraException{
+        try {
+            restclient.post(getRestUri(key) + "/attachments",filename,in);
+        }catch (Exception ex){
+            throw new JiraException("Failed add attachment to issue " + key, ex);
+        }
+    }
+
+    /**
      * Adds a remote link to this issue.
      *
      * @param url Url of the remote link
