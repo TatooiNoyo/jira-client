@@ -40,6 +40,7 @@ public class Assignee extends Resource {
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("query", username);
+        params.put("username", username);
         params.put("projectKeys", projectKey);
         params.put("maxResults", maxResults != null ? maxResults : "50");
         params.put("startAt", "0");
