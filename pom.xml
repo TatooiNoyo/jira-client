@@ -26,6 +26,10 @@
         </license>
     </licenses>
 
+    <scm>
+        <url>https://github.com/tatooinoyo/jira-client</url>
+        <connection>https://github.com/tatooinoyo/jira-client</connection>
+    </scm>
 
     <developers>
         <developer>
@@ -98,13 +102,6 @@
 
     </dependencies>
 
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>local-repo-release</id>-->
-<!--            <name>GitHub Release</name>-->
-<!--            <url>file://${project.basedir}/maven-repo</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
