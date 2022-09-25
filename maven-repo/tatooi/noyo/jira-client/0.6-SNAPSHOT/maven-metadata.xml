@@ -5,26 +5,54 @@
   <version>0.6-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20220924.141233</timestamp>
-      <buildNumber>4</buildNumber>
+      <timestamp>20220925.095647</timestamp>
+      <buildNumber>5</buildNumber>
     </snapshot>
-    <lastUpdated>20220924141233</lastUpdated>
+    <lastUpdated>20220925095647</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>0.6-20220924.141233-4</value>
-        <updated>20220924141233</updated>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>0.6-20220924.141233-4</value>
-        <updated>20220924141233</updated>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>0.6-20220924.141233-4</value>
-        <updated>20220924141233</updated>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar.asc</extension>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom.asc</extension>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar.asc</extension>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar.asc</extension>
+        <value>0.6-20220925.095647-5</value>
+        <updated>20220925095647</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
