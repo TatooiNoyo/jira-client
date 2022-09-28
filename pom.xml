@@ -4,7 +4,7 @@
 
     <groupId>io.github.tatooinoyo</groupId>
     <artifactId>jira-client</artifactId>
-    <version>0.6-SNAPSHOT</version>
+    <version>0.6-beta</version>
     <packaging>jar</packaging>
 
     <name>jira-client</name>
